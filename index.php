@@ -14,14 +14,9 @@ class Post {
     }
 
     public function viewPost() {
-        echo "Titolo: {$this->title} \nCategoria: {$this->category->getMyCategory()} \nTags: {$this->tags} \n";
+        echo "Titolo: {$this->title} \n" . "Categoria:" . $this->category->getMyCategory() . "\n" . "Tags: {$this->tags} \n";
     }
 }
-
-$attualita = new Attualita();
-$sport = new Sport();
-$gossip = new Gossip();
-$storia = new Storia();
 
 $post1 = new Post("Titolo 1", $attualita, "tag1");
 $post2 = new Post("Titolo 2", $sport, "tag2");
