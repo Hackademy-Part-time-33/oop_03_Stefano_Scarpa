@@ -14,13 +14,15 @@ class Post {
     }
 
     public function viewPost() {
-        echo "Titolo: {$this->title} \n" . "Categoria:" . $this->category->getMyCategory() . "\n" . "Tags: {$this->tags} \n";
+        echo "Titolo: {$this->title} \n"; 
+        echo "Categoria: " . $this->category->getMyCategory();
+        echo "Tags: {$this->tags} \n";
     }
 }
 
-$post1 = new Post("Titolo 1", $attualita, "tag1");
-$post2 = new Post("Titolo 2", $sport, "tag2");
-$post3 = new Post("Titolo 3", $gossip, "tag3");
+$post1 = new Post("Titolo 1", new Attualita(), "tag1");
+$post2 = new Post("Titolo 2", new Sport(), "tag2");
+$post3 = new Post("Titolo 3", new Gossip(), "tag3");
 
 $post1 -> viewPost();
 $post2 -> viewPost();
