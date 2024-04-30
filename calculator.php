@@ -46,7 +46,7 @@ class Rettangolo{
     }
 };
 
-$rettangolo = new Rettangolo (10,45);
+$rettangolo = new Rettangolo (10,20);
 $rettangolo->Area();
 $rettangolo->Perimetro();
 $rettangolo->Diagonale();
